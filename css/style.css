@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("../asserts/bgimage.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #1f2937;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #16a34a;
+}
+
+.navbar nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+
+    color: #374151;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #16a34a;
+}
+
+.nav-button {
+    background: #16a34a;
+
+    color: white !important;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+}
+
+.nav-button:hover {
+    background: #15803d;
+
+    color: white !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    padding: 50px 8%;
+}
+
+
+/* ================= LEFT CONTENT ================= */
+
+.hero-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #16a34a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+
+    color: #16a34a;
+
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+
+    color: #374151;
+
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #6b7280;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================= LOGIN BUTTON ================= */
+
+.main-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #16a34a;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #15803d;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= INFORMATION BOX ================= */
+
+.info-box {
+    width: 400px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+
+    border-top: 4px solid #16a34a;
+}
+
+.info-box h3 {
+    font-size: 24px;
+
+    color: #16a34a;
+
+    margin-bottom: 10px;
+}
+
+.info-intro {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================= INFORMATION ITEMS ================= */
+
+.info-item {
+    padding: 11px 0;
+
+    border-bottom: 1px solid #dcfce7;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item strong {
+    display: block;
+
+    color: #1f2937;
+
+    font-size: 15px;
+
+    margin-bottom: 4px;
+}
+
+.info-item span {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+    .hero {
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 60px 6%;
+    }
+
+    .hero-content {
+        max-width: 700px;
+
+        text-align: center;
+    }
+
+    .info-box {
+        width: 100%;
+
+        max-width: 600px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+    .navbar nav a:not(.nav-button) {
+        display: none;
+    }
+
+    .nav-button {
+        padding: 9px 13px;
+
+        font-size: 13px !important;
+    }
+
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .info-box {
+        padding: 22px;
+    }
+
+}
